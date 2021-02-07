@@ -1,9 +1,4 @@
 out
 .idea
-*.xml
-*.gradle
-*.iml
 
 
-# Project exclude paths
-/target/

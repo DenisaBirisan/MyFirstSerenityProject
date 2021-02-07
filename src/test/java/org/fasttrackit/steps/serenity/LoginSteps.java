@@ -4,9 +4,11 @@ import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.AccountPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.LoginPage;
+import org.fasttrackit.utils.BaseTest;
+import org.fasttrackit.utils.EnvironmentConstants;
 import org.junit.Assert;
 
-public class LoginSteps {
+public class LoginSteps extends BaseTest {
 
     private HomePage homePage;
     private LoginPage loginPage;
@@ -33,6 +35,7 @@ public class LoginSteps {
 
     @Step
     public void login (String userName, String password){
+        navigateToLogin();
         setEmail(userName);
         setPassword(password);
         clickLoginButton();

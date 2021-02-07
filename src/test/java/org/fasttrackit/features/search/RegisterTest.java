@@ -14,6 +14,7 @@ public class RegisterTest {
     @Steps
     private RegisterSteps registerSteps;
 
+
     @Test
     public void validCredentialsRegister(){
         registerSteps.navigateToRegister();

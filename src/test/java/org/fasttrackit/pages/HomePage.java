@@ -13,6 +13,18 @@ public class HomePage extends PageObject {
     @FindBy(css = "a[title*='Log']")
     private WebElementFacade loginLink;
 
+    @FindBy(css="[title~=\"Register\"]")
+    private WebElementFacade registerLink;
+
+    @FindBy(id="search")
+    private WebElementFacade searchField;
+
+    @FindBy(css = ".search-button")
+    private WebElementFacade searchButton;
+
+    @FindBy(css = ".header-minicart .label")
+    private WebElementFacade cartButton;
+
     public void clickAccountLink(){
         clickOn(accountLink);
     }
@@ -21,11 +33,19 @@ public class HomePage extends PageObject {
         clickOn(loginLink);
     }
 
-    @FindBy(css="[title~=\"Register\"]")
-    private WebElementFacade registerLink;
-
     public void clickRegisterLink(){
         clickOn(registerLink);
+    }
+
+    public void setSearchField(String text){
+        typeInto(searchField,text);
+    }
+
+    public void clickSearchButton(){
+        clickOn(searchButton);
+    }
+    public void clickCartButton(){
+        clickOn(cartButton);
     }
 
 

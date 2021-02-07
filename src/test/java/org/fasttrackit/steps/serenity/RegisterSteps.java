@@ -8,6 +8,7 @@ import org.fasttrackit.pages.RegisterPage;
 import org.junit.Assert;
 
 public class RegisterSteps {
+
     private HomePage homePage;
     private RegisterPage registerPage;
     private AccountPage accountPage;
